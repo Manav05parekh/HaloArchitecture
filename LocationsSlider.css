@@ -1,0 +1,94 @@
+.locations-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .nav-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    z-index: 10;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button.left {
+    left: 10px;
+  }
+  
+  .nav-button.right {
+    right: 10px;
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(200, 200, 200, 0.9);
+  }
+  
+  .slider-window {
+    overflow: hidden;
+    width: 100%;
+  }
+  .slider-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+  }
+  
+  .location-card {
+    flex: 0 0 100%;
+    height: 90vh;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.6s ease;
+  }
+  
+  /* Responsive text sizes */
+@media (max-width: 1024px) {
+    .location-name {
+      font-size: 4rem; /* Reduce size for tablets */
+    }
+  
+    .property-name {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .location-name {
+      font-size: 5rem; /* Reduce size for mobile */
+    }
+  
+    .property-name {
+      font-size: 1.8rem;
+    }
+  
+    .explore-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .location-name {
+      font-size: 2.5rem; /* Adjust for smaller screens */
+    }
+  
+    .property-name {
+      font-size: 1.5rem;
+    }
+  
+    .explore-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }

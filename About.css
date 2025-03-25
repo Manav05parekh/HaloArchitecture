@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@700;900&display=swap');
+
+.about-wrapper {
+  background-color: #fefefe;
+  padding: 6rem 2rem;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dark .about-wrapper {
+  background-color: #111828; /* Dark mode background */
+}
+
+.about-heading {
+  font-size: 6rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0; /* Initially hidden, will animate in */
+  transform: translateY(30px);
+  transition: color 0.3s ease-in-out;
+}
+
+.dark .about-heading {
+  color: #fefefe; /* Light text in dark mode */
+}
+
+.line {
+  display: block;
+  width: 100%;
+}
+
+.right-align {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 8rem;
+}
+
+.serif {
+  font-family: 'Playfair Display', serif;
+  font-weight: 200;
+  font-style: normal;
+  display: inline-block;
+  font-size: 10rem;
+  margin-left: 0.3rem;
+  white-space: nowrap;
+}
+
+/* Responsive font scaling */
+@media (max-width: 1024px) {
+  .about-heading {
+    font-size: 2.8rem;
+  }
+  .bold {
+    font-size: 5rem;
+  }
+  .serif {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2.5rem;
+  }
+  .bold {
+    font-size: 4rem;
+  }
+  .serif {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 2rem;
+  }
+  .bold {
+    font-size: 3rem;
+  }
+  .serif {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,151 @@
+.hero-title:hover,
+.hero-subtitle:hover {
+  cursor: default;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.hero-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  z-index: 1;
+}
+
+.hero-bg {
+  background-image: url("/src/assets/hero.jpg");
+  filter: brightness(0.6);
+  z-index: 1;
+}
+
+.hero-fg {
+  background-image: url("/src/assets/hero-overlay.png"); /* optional */
+  opacity: 0.2;
+  z-index: 2;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: white;
+  pointer-events: none;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+
+.hero-subtitle {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  opacity: 1;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.hero-description {
+  width: 100%;
+  padding: 3rem 6vw;
+  text-align: center; /* Center align for better readability */
+}
+
+/* Headings inside hero-description */
+.hero-description h2 {
+  width: 100%;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
+  color: #222;
+  font-weight: 700; /* Changed from 300 to 700 for better emphasis */
+  line-height: 1.2;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Paragraph inside hero-description */
+.hero-description p {
+  width: 100%;
+  padding: 1rem;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  color: #222;
+  line-height: 1.4;
+  font-weight: 300;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Dark Mode Styles */
+.dark .hero-description h2 {
+  color: white;
+}
+
+.dark .hero-description p {
+  color: white;
+}
+
+/* Responsiveness */
+
+/* Tablet Screens (768px and up) */
+@media (max-width: 1024px) {
+  .hero-description {
+    padding: 2.5rem 5vw;
+  }
+
+  .hero-description h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-description p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 768px) {
+  .hero-description {
+    padding: 2rem 4vw;
+  }
+
+  .hero-description h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-description p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile Screens (Below 480px) */
+@media (max-width: 480px) {
+  .hero-description {
+    padding: 1.5rem 3vw;
+  }
+
+  .hero-description h2 {
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+
+  .hero-description p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+}

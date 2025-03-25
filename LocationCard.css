@@ -1,0 +1,139 @@
+.location-card {
+    flex: 0 0 100%;
+    height: 90vh;
+    scroll-snap-align: center;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    /* Remove per-card animation here */
+  }
+  
+  .location-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    border-radius: 20px;
+  }
+  
+  .overlay {
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .location-name,
+  .property-name,
+  .explore-btn {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeSlideInRight 0.6s forwards;
+  }
+  
+  .location-name {
+    font-size: 5.2rem;
+    margin-bottom: 0.5rem;
+    animation-delay: 0.2s;
+  }
+  
+  .property-name {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    animation-delay: 0.4s;
+  }
+  
+  .explore-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    animation-delay: 0.6s;
+    transition: background 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .location-name,
+.property-name,
+.explore-btn {
+  opacity: 0;
+  transform: rotateY(-90deg);
+}
+
+/* Remove animation: fadeSlideInRight from these classes */
+.slider-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1); /* smoother easing */
+  }
+  
+  @keyframes fadeSlideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Add this to your LocationCard.css */
+
+.flip-animate {
+    animation: flipInReverse 0.6s forwards;
+  }
+  
+  @keyframes flipInReverse {
+    0% {
+      opacity: 0;
+      transform: rotateY(-90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateY(0);
+    }
+  }
+  /* Responsive text sizes */
+@media (max-width: 1024px) {
+    .location-name {
+      font-size: 4rem; /* Reduce size for tablets */
+    }
+  
+    .property-name {
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .location-name {
+      font-size: 3rem; /* Reduce size for mobile */
+    }
+  
+    .property-name {
+      font-size: 1.8rem;
+    }
+  
+    .explore-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .location-name {
+      font-size: 2.5rem; /* Adjust for smaller screens */
+    }
+  
+    .property-name {
+      font-size: 1.5rem;
+    }
+  
+    .explore-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
